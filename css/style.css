@@ -1,0 +1,67 @@
+.card {
+    border: 3px solid black; /* Bordes negros y gruesos */
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px;
+    max-width: 200px;
+    text-align: center;
+}
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+.info-card {
+    text-align: center;
+}
+.u-full-width {
+    width: 100%;
+}
+.button-primary {
+    background-color: #32CD32; /* Verde más claro */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: white; /* Esto es opcional, pero ayudará a que el texto sea visible sobre el fondo negro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos toda la altura de la pantalla */
+    flex-direction: column;
+}
+
+/* Hacer que la imagen de encabezado ocupe todo el ancho de la pantalla */
+.header-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.header-img {
+    width: 100%;
+    height: auto;
+    filter: blur(5px);
+}
+
+.header-text {
+    position: absolute;
+    text-shadow: 20px ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    font-weight:lighter;
+    color: rgb(253, 253, 253);
+    font-family:fantasy;
+}
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<header class="header-container">
+    <img src="img/header.webp" alt="" class="header-img">
+    <div class="header-text">Gamers Spot</div>
+</header>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Contacto</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Nuestras marcas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    <div class="container">
+        <!-- Input para filtrar productos -->
+        <div class="form-group">
+            <span><button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#carritoModal">
+                Ver Carrito
+            </button></span>
+            <input style="width: min-content;" type="text" class="form-control" id="filtro" placeholder="Que estas buscando?">
+        </div>
+    
+        <div id="cards" class="row"></div>
+    
+        <!-- Modal -->
+        <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="carritoModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <div class="form-group">
+                            </div>
+                        </button>
+                                <input type="text" class="form-control" id="codigo-promo" placeholder="Ingrese el código promocional">
+                                <button type="button" class="btn btn-success" onclick="aplicarDescuento()">Aplicar Descuento</button>
+                                <!--<button id="finalizar-compra" class="u-full-width button-primary">Finalizar Compra</button>-->
+                                <button type="button" id="finalizar-compra" class="btn btn-warning">Finalizar Compra</button>
+                    </div>
+                    <div class="modal-body">
+                        <table id="carrito" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Título</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="lista-carrito"></tbody>
+                        </table>
+                        <div id="total"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="vaciar-carrito" class="btn btn-danger">Vaciar Carrito</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="background-color: black; width: 100%;"><h6 style="text-decoration-color: white;">Berurena Ariel</h6></footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/index3.js"></script>
+</body>
+</html>
